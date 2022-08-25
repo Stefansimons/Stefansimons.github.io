@@ -1,0 +1,45 @@
+/** Overal layout **/
+.container {
+  display: flex;
+  border: 1px solid red;
+  min-height: 50rem;
+  // max-width: 120rem;
+  margin: 0 10rem;
+  box-shadow: var(--shadow-dark);
+  background-color: var(--color-grey-light-2);
+}
+.left-sidebar {
+  flex: 0 0 20%;
+  background-color: var(--color-primary-light);
+  border: 1px solid yellow;
+}
+.right-sidebar {
+  flex: 0 0 10%;
+  background-color: var(--color-primary-light);
+  border: 1px solid green;
+}
+.central-content {
+  flex: 1;
+  border: 1px solid orangered;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-content {
+}
+.header {
+  // font-size: 1.4rem;
+  // height: 7rem;
+  // background-color: #fff;
+  // border-bottom: var(--color-grey-light-2);
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+}
+.footer {
+  background-color: var(--color-primary-light);
+  border: 1px solid orangered;
+}
+.home {
+  border: 1px solid springgreen;
+}
