@@ -29,7 +29,7 @@ body:root {
   --color-primary-dark-2: #645e9e;
   --color-primary-dark-2: #645e9e;
 
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-light: -2px 0rem 1rem 0px var(--color-primary-main-1);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 /********* Start global layout settings ***********/
