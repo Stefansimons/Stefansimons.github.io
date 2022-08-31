@@ -14,10 +14,12 @@ Grey dark 1: #333
 Grey dark 2: #777
 Grey dark 3: #999
 
-// Primary colors = light theme ; Secondary colors = dark theme
 */
-:root {
-  // Light theme
+body:root {
+  // Light theme variables = Dark theme variables , only different values!!!
+  //  dark colors for light theme  = light colors for dark theme
+  // Default colors
+  --main-bg-color: rgb(240, 240, 246);
   --color-primary: rgb(240, 240, 246);
   --color-primary-light-1: rgb(255, 255, 255);
   --color-primary-main-1: #ffb400;
@@ -44,18 +46,24 @@ Grey dark 3: #999
 
 html {
   box-sizing: border-box;
-  font-size: 75%; // Global font size = 12px
+  font-size: 100%; // Global font size = 12px
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-color: var(--color-primary);
+  background-color: var(--main-bg-color);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
   color: var(--color-grey-dark-1);
   border: 2px solid black;
 }
+// .light-body-bg {
+//   background-color: rgb(240, 240, 246);
+// }
+// .dark-body-bg {
+//   background-color: rgb(24, 25, 26);
+// }
 /*************** End *************/
