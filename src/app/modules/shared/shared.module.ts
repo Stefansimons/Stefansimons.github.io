@@ -1,3 +1,4 @@
+import { ServicesComponent } from './components/services/services.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,6 +14,7 @@ import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.
     HomeComponent,
     LeftSidebarComponent,
     RightSidebarComponent,
+    ServicesComponent,
   ],
   imports: [CommonModule, SharedRoutingModule],
   exports: [
@@ -20,6 +22,7 @@ import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.
     HomeComponent,
     LeftSidebarComponent,
     RightSidebarComponent,
+    ServicesComponent,
   ],
 })
 export class SharedModule {}
