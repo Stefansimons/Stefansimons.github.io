@@ -4,7 +4,10 @@
   </div>
   <main class="central-content">
     <div class="main-content scrol-bar">
-      <router-outlet></router-outlet>
+      <div class="loader-wrapper" *ngIf="loading$ | async">
+        <span class="loader"></span>
+      </div>
+      <router-outlet *ngIf="!(loading$ | async)"></router-outlet>
     </div>
     <div class="footer">
       <app-footer></app-footer>

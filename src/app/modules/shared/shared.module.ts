@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LeftSidebarComponent } from './components/left-sidebar/left-sidebar.component';
 import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.component';
+import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.
     LeftSidebarComponent,
     RightSidebarComponent,
     ServicesComponent,
+    EducationComponent,
   ],
   imports: [CommonModule, SharedRoutingModule],
   exports: [
