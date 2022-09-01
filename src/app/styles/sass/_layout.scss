@@ -24,6 +24,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  // Scroll
+  height: 100vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  // Mozila
+  scrollbar-width: none;
 }
 .main-content {
 }
@@ -35,5 +44,4 @@
 }
 .home {
   border: 1px solid springgreen;
-  padding: 2rem;
 }
