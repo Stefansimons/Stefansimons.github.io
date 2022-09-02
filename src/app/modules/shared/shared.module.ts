@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LeftSidebarComponent } from './components/left-sidebar/left-sidebar.component';
 import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.component';
 import { EducationComponent } from './components/education/education.component';
+import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { EducationComponent } from './components/education/education.component';
     RightSidebarComponent,
     ServicesComponent,
     EducationComponent,
+    WorkExperienceComponent,
   ],
   imports: [CommonModule, SharedRoutingModule],
   exports: [
