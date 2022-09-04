@@ -15,7 +15,7 @@ Grey dark 2: #777
 Grey dark 3: #999
 
 */
-body:root {
+:root {
   // Light theme variables = Dark theme variables , only different values!!!
   //  dark colors for light theme  = light colors for dark theme
   // Default colors
@@ -25,6 +25,7 @@ body:root {
   --color-primary-main-1: #ffb400;
   --color-primary-light-2: #2b2b2b;
   --color-primary-light-3: #8884ad; // Text main color
+  --color-primary-light-4: #26ba64;
   --color-primary-dark-1: #333;
   --color-primary-dark-2: #645e9e;
   --color-primary-dark-2: #645e9e;

@@ -1,6 +1,7 @@
 import { ServicesComponent } from './components/services/services.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
@@ -9,6 +10,7 @@ import { LeftSidebarComponent } from './components/left-sidebar/left-sidebar.com
 import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.component';
 import { EducationComponent } from './components/education/education.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,9 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
     ServicesComponent,
     EducationComponent,
     WorkExperienceComponent,
+    ContactComponent,
   ],
-  imports: [CommonModule, SharedRoutingModule],
+  imports: [CommonModule, SharedRoutingModule, FormsModule],
   exports: [
     FooterComponent,
     HomeComponent,

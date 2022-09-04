@@ -1,3 +1,4 @@
+import { ContactComponent } from './components/contact/contact.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'work',
     component: WorkExperienceComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
 ];
 

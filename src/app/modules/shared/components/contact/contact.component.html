@@ -1,0 +1,66 @@
+<div class="contact">
+  <div class="form__wrapper picture-box">
+    <div class="form__content">
+      <h2 class="heading heading-h2">GET IN TOUCH</h2>
+      <form
+        action="#"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        class="form"
+        novalidate
+      >
+        <div class="form__input-group">
+          <label for="inpFullName" class="form__label">Full Name</label>
+          <input
+            id="inpFullName"
+            type="text"
+            name="fullName"
+            [(ngModel)]="model.fullName"
+            #fullName="ngModel"
+            class="form__input"
+            required
+            maxlength="15"
+          />
+        </div>
+        <div class="form__input-group">
+          <label for="inpEmail" class="form__label">Email</label>
+          <input
+            id="inpEmail"
+            type="text"
+            name="email"
+            [(ngModel)]="model.email"
+            #email="ngModel"
+            class="form__input"
+            required
+          />
+        </div>
+        <div class="form__input-group">
+          <label for="txtMessage" class="form__label">Message</label>
+          <textarea
+            id="txtMessage"
+            type="textarea"
+            name="message"
+            [(ngModel)]="model.message"
+            #message="ngModel"
+            rows="10"
+            cols="20"
+            class="form__input"
+          ></textarea>
+        </div>
+
+        <div class="buttons-box">
+          <button type="submit" class="btn btn-submit btn-transform">
+            Send
+          </button>
+          <button
+            type="reset"
+            class="btn btn-reset btn-reset-light btn-transform"
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
