@@ -6,6 +6,7 @@ export const lightTheme: Theme = {
     '--main-bg-color': 'rgb(240, 240, 246)',
     '--color-primary': 'rgb(240, 240, 246)',
     '--color-primary-light-1': 'rgb(255, 255, 255)',
+    '--color-primary-central-content': '#2f3e2f63',
     '--color-primary-main-1': '#ffb400',
     '--color-primary-light-2': '#2b2b2b',
     '--color-primary-light-3': '#8884ad', // Text main color
