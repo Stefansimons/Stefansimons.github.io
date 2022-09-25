@@ -11,5 +11,9 @@ export const lightTheme: Theme = {
     '--color-primary-light-3': '#8884ad', // Text main color
     '--color-primary-dark-1': '#333',
     '--color-primary-dark-2': '#645e9e',
+    '--color-primary-animation-1': '#231557',
+    '--color-primary-animation-2': '#44107a',
+    '--color-primary-animation-3': '#ff1361',
+    '--color-primary-animation-4': '#fff800',
   },
 };

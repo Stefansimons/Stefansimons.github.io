@@ -28,7 +28,14 @@ Grey dark 3: #999
   --color-primary-light-4: #26ba64;
   --color-primary-dark-1: #333;
   --color-primary-dark-2: #645e9e;
-  --color-primary-dark-2: #645e9e;
+  --color-primary-animation-1: #231557;
+  --color-primary-animation-2: #44107a;
+  --color-primary-animation-3: #ff1361;
+  --color-primary-animation-4: #fff800;
+  --color-secondary-animation-1: #337537;
+  --color-secondary-animation-2: #76dfdc;
+  --color-secondary-animation-3: #ce527b;
+  --color-secondary-animation-4: #aae910;
 
   --shadow-light: -2px 0rem 1rem 0px var(--color-primary-main-1);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
@@ -59,7 +66,7 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   color: var(--color-grey-dark-1);
-  border: 2px solid black;
+  //border: 2px solid black;
 }
 // .light-body-bg {
 //   background-color: rgb(240, 240, 246);

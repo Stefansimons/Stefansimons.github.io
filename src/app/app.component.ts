@@ -13,6 +13,10 @@ export class AppComponent implements OnInit {
   constructor(private loaderS: LoaderService) {}
 
   ngOnInit(): void {
+    this.loaderS.showLoader();
+    setTimeout(() => {
+      this.loaderS.hideLoader();
+    }, 2000);
     // this.loading$.subscribe((isLoading) =>
     //   console.log('subscribe=>', isLoading)
     // );

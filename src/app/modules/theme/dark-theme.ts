@@ -11,5 +11,9 @@ export const darkTheme: Theme = {
     '--color-primary-light-3': 'rgb(250, 250, 250)', // Text main color
     '--color-primary-dark-1': 'rgb(255,255,255)',
     '--color-primary-dark-2': '#645e9e',
+    '--color-primary-animation-1': '#337537',
+    '--color-primary-animation-2': '#76dfdc',
+    '--color-primary-animation-3': '#ce527b',
+    '--color-primary-animation-4': '#aae910',
   },
 };
