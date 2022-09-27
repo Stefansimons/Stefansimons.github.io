@@ -1,3 +1,27 @@
-<header>
-  <p>header works!</p>
+<header class="mobile-header">
+  <div class="mobile-header__menu">
+    <div class="dot-menu">
+      <input
+        class="dot-menu__checkbox"
+        id="dot-menu"
+        type="checkbox"
+        (change)="onToggleSidebar()"
+      />
+      <label class="dot-menu__label" for="dot-menu">
+        <span></span>
+      </label>
+    </div>
+    <div class="theme">
+      <app-themebtn></app-themebtn>
+    </div>
+    <!-- <div class="hamburger-menu">
+    <input type="checkbox" class="hamburger-menu__checkbox" id="navi-toggle" />
+
+    <label for="navi-toggle" class="hamburger-menu__button-hamburger">
+      <span class="hamburger-menu__icon">&nbsp;</span>
+    </label>
+
+    <div class="hamburger-menu__background">&nbsp;</div>
+  </div> -->
+  </div>
 </header>

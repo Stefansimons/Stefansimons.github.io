@@ -1,0 +1,23 @@
+@import "./../../../../styles/sass/abstracts/mixins.scss";
+.mobile-header {
+  display: none;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+
+  height: 4rem;
+  background-color: var(--color-primary-light-1);
+  @include respond(tab-port) {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+  }
+}

@@ -1,12 +1,12 @@
-import { ThemeService } from './../../../theme/theme.service';
+import { ThemeService } from './../../../../theme/theme.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-right-sidebar',
-  templateUrl: './right-sidebar.component.html',
-  styleUrls: ['./right-sidebar.component.scss'],
+  selector: 'app-themebtn',
+  templateUrl: './themebtn.component.html',
+  styleUrls: ['./themebtn.component.scss'],
 })
-export class RightSidebarComponent implements OnInit {
+export class ThemebtnComponent implements OnInit {
   constructor(private themeService: ThemeService) {}
   ngOnInit(): void {}
   onChangeTheme() {

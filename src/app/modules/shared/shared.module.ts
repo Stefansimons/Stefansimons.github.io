@@ -11,6 +11,7 @@ import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.
 import { EducationComponent } from './components/education/education.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ThemebtnComponent } from './components/microcomponents/themebtn/themebtn.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ContactComponent } from './components/contact/contact.component';
     EducationComponent,
     WorkExperienceComponent,
     ContactComponent,
+    ThemebtnComponent,
   ],
   imports: [CommonModule, SharedRoutingModule, FormsModule],
   exports: [
@@ -30,6 +32,7 @@ import { ContactComponent } from './components/contact/contact.component';
     LeftSidebarComponent,
     RightSidebarComponent,
     ServicesComponent,
+    ThemebtnComponent,
   ],
 })
 export class SharedModule {}

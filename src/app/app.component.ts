@@ -1,3 +1,4 @@
+import { HelperService } from './modules/shared/services/helper.service';
 import { LoaderService } from './modules/shared/services/loader.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   loading$ = this.loaderS.isLoading$;
   title = 'portfolio-project';
-
-  constructor(private loaderS: LoaderService) {}
+  istoggledSidebar$ = this.helperS.isToggleSidebar$;
+  constructor(private loaderS: LoaderService, private helperS: HelperService) {}
 
   ngOnInit(): void {
     this.loaderS.showLoader();

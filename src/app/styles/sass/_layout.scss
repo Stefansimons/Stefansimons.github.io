@@ -1,35 +1,43 @@
+// @import "_mixins.scss";
+@import "./abstracts/_mixins.scss";
+
 /** Overal layout **/
 .container {
   display: flex;
   // border: 1px solid red;
   margin: 0 5rem;
+  @include respond(tab-land) {
+    margin: 0;
+  }
   box-shadow: var(--shadow-dark);
   background-color: var(--primary-color);
 }
 .left-sidebar {
-  flex: 0 0 20%;
-  background-color: var(--color-primary-light-1);
+  @include sidebar(20%);
   color: var(--color-primary-dark-1);
-  // border: 1px solid yellow;
-  max-height: 52rem;
-  position: sticky;
-  top: 0;
   margin-right: 1rem;
+  @include respond(tab-port) {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+    transition: linear 0.3s;
+    width: 0;
+    &.toggle {
+      width: 20rem;
+      z-index: 5;
+      margin-top: 4rem;
+    }
+  }
 }
 .right-sidebar-wrapper {
-  flex: 0 0 10%;
-  background-color: var(--color-primary-light-1);
-  // border: 1px solid green;
-  max-height: 52rem;
-  position: sticky;
-  top: 0;
+  @include sidebar(10%);
   margin-left: 1rem;
 }
 .main-content {
-  flex: 0 0 70%;
+  flex-basis: 70%;
   flex-grow: 1;
-  // display: flex;
-  // height: 100%;
 }
 .central-content {
   flex: 1;
@@ -38,6 +46,9 @@
   // border: 1px solid orangered;
   display: flex;
   flex-direction: column;
+  @include respond(tab-port) {
+    margin-top: 4rem;
+  }
   // height: 100vh;
   // overflow: hidden;
 }

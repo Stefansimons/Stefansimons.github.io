@@ -1,5 +1,6 @@
 <div class="container" appTheme>
-  <div class="left-sidebar">
+  <app-header></app-header>
+  <div class="left-sidebar {{ (istoggledSidebar$ | async) ? 'toggle' : '' }}">
     <app-left-sidebar></app-left-sidebar>
   </div>
   <main class="central-content">
