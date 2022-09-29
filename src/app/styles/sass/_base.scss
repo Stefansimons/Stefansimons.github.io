@@ -1,3 +1,5 @@
+@import "./abstracts/mixins";
+
 /*
 COLORS
 
@@ -76,3 +78,177 @@ body {
 //   background-color: rgb(24, 25, 26);
 // }
 /*************** End *************/
+// Responsive
+// Row , columns
+// TODO Make mixin for this
+[class*="col-"] {
+  float: left;
+  padding: 0.5rem;
+}
+.row {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  @include clearfix();
+}
+/* For phones,small screens, 0px<screen<600px: */
+[class*="col-"] {
+  @include respond(phone) {
+    width: 100% !important;
+  }
+}
+/* For tablets, 600px<screen<900px: */
+.col-m-1 {
+  @include respond(tab-port) {
+    width: 8.33%;
+  }
+}
+.col-m-2 {
+  @include respond(tab-port) {
+    width: 16.66%;
+  }
+}
+.col-m-3 {
+  @include respond(tab-port) {
+    width: 25%;
+  }
+}
+.col-m-4 {
+  @include respond(tab-port) {
+    width: 33.33%;
+  }
+}
+.col-m-5 {
+  @include respond(tab-port) {
+    width: 41.66%;
+  }
+}
+.col-m-6 {
+  @include respond(tab-port) {
+    width: 50%;
+  }
+}
+.col-m-7 {
+  @include respond(tab-port) {
+    width: 58.33%;
+  }
+}
+.col-m-8 {
+  @include respond(tab-port) {
+    width: 66.66%;
+  }
+}
+.col-m-9 {
+  @include respond(tab-port) {
+    width: 75%;
+  }
+}
+.col-m-10 {
+  @include respond(tab-port) {
+    width: 83.33%;
+  }
+}
+.col-m-11 {
+  @include respond(tab-port) {
+    width: 91.66%;
+  }
+}
+.col-m-12 {
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}
+/* For tablet landscape,large screens, 900px<screen<1200px: */
+.col-lg-1 {
+  @include respond(tab-land) {
+    width: 8.33%;
+  }
+}
+.col-lg-2 {
+  @include respond(tab-land) {
+    width: 16.66%;
+  }
+}
+.col-lg-3 {
+  @include respond(tab-land) {
+    width: 25%;
+  }
+}
+.col-lg-4 {
+  @include respond(tab-land) {
+    width: 33.33%;
+  }
+}
+.col-lg-5 {
+  @include respond(tab-land) {
+    width: 41.66%;
+  }
+}
+.col-lg-6 {
+  @include respond(tab-land) {
+    width: 50%;
+  }
+}
+.col-lg-7 {
+  @include respond(tab-land) {
+    width: 58.33%;
+  }
+}
+.col-lg-8 {
+  @include respond(tab-land) {
+    width: 66.66%;
+  }
+}
+.col-lg-9 {
+  @include respond(tab-land) {
+    width: 75%;
+  }
+}
+.col-lg-10 {
+  @include respond(tab-land) {
+    width: 83.33%;
+  }
+}
+.col-lg-11 {
+  @include respond(tab-land) {
+    width: 91.66%;
+  }
+}
+.col-lg-12 {
+  @include respond(tab-land) {
+    width: 100%;
+  }
+}

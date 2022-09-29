@@ -12,6 +12,7 @@ import { EducationComponent } from './components/education/education.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ThemebtnComponent } from './components/microcomponents/themebtn/themebtn.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ThemebtnComponent } from './components/microcomponents/themebtn/themebt
     WorkExperienceComponent,
     ContactComponent,
     ThemebtnComponent,
+    NavigationComponent,
   ],
   imports: [CommonModule, SharedRoutingModule, FormsModule],
   exports: [
@@ -33,6 +35,8 @@ import { ThemebtnComponent } from './components/microcomponents/themebtn/themebt
     RightSidebarComponent,
     ServicesComponent,
     ThemebtnComponent,
+    NavigationComponent,
+    FormsModule,
   ],
 })
 export class SharedModule {}

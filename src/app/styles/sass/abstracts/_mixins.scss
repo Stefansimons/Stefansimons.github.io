@@ -1,7 +1,7 @@
 @mixin clearfix {
   &::after {
     content: "";
-    display: table;
+    display: block;
     clear: both; /* Brise float left i float right od float bloka*/
   }
 }
@@ -19,8 +19,22 @@
   position: sticky;
   top: 0;
 }
-// MEDIA QUERY MANAGER
+// Responsive web design
+
+// MEDIA QUERY MANAGER , NOTE: Mobile first principle
 /*
+  0 - 600px - Extra small devices (phones, 600px and down)   =>  phone parameter
+  600 - 768px -  Small devices (portrait tablets and large phones, 600px and up) => tab-port parameter
+  768 - 992px - Medium devices (landscape tablets, 768px and up)=> tab-land parameter
+  992 - 1200px - Large devices (laptops/desktops, 992px and up)=> lap-desk parameter
+  1200 - 1800px - Extra large devices (large laptops and desktops, 1200px and up)=> big-desktop parameter
+  [1200 - 1800px] - gde je kod primenjen bez media query-ja
+*/
+/*1em = 16px , Relative to the font-size of the element (2em means 2 times the size of the current font)
+*/
+// MEDIA QUERY MANAGER , NOTE: Desktop first principle
+/*
+ /*
   0 - 600px - mobile   => phone parameter
   600 - 900px -  tablet portrait => tab-port parameter
   900 - 1200px - tablet landscape => tab-land parameter
@@ -29,11 +43,20 @@
 */
 /*1em = 16px
 */
+
+/*1em = 16px , Relative to the font-size of the element (2em means 2 times the size of the current font)
+*/
+
+// /* For mobile phones: */
+// [class*="col-"] {
+//   width: 100%;
+// }
+// Desktop first
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content;
-    } //600px
+    } //600px -
   }
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) {
@@ -51,3 +74,142 @@
     } //1800
   }
 }
+// Mobile first
+// @mixin respond($breakpoint) {
+//   @if $breakpoint == phone {
+//     @media only screen and (max-width: 37.5em) {
+//       @content;
+//     } //600px -
+//   }
+//   @if $breakpoint == tab-port {
+//     @media only screen and (min-width: 56.25em) {
+//       @content;
+//     } //600px +
+//   }
+//   @if $breakpoint == tab-land {
+//     @media only screen and (min-width: 48em) {
+//       /* For tablets: */
+//       .col-m-1 {
+//         width: 8.33%;
+//       }
+//       .col-m-2 {
+//         width: 16.66%;
+//       }
+//       .col-m-3 {
+//         width: 25%;
+//       }
+//       .col-m-4 {
+//         width: 33.33%;
+//       }
+//       .col-m-5 {
+//         width: 41.66%;
+//       }
+//       .col-m-6 {
+//         width: 50%;
+//       }
+//       .col-m-7 {
+//         width: 58.33%;
+//       }
+//       .col-m-8 {
+//         width: 66.66%;
+//       }
+//       .col-m-9 {
+//         width: 75%;
+//       }
+//       .col-m-10 {
+//         width: 83.33%;
+//       }
+//       .col-m-11 {
+//         width: 91.66%;
+//       }
+//       .col-m-12 {
+//         width: 100%;
+//       }
+//       @content;
+//     } //768px +
+//   }
+//   @if $breakpoint == lap-desktop {
+//     @media only screen and (min-width: 62em) {
+//       /* For laptop-desktop: */
+//       // .col-1 {
+//       //   width: 8.33%;
+//       // }
+//       // .col-2 {
+//       //   width: 16.66%;
+//       // }
+//       // .col-3 {
+//       //   width: 25%;
+//       // }
+//       // .col-4 {
+//       //   width: 33.33%;
+//       // }
+//       // .col-5 {
+//       //   width: 41.66%;
+//       // }
+//       // .col-6 {
+//       //   width: 50%;
+//       // }
+//       // .col-7 {
+//       //   width: 58.33%;
+//       // }
+//       // .col-8 {
+//       //   width: 66.66%;
+//       // }
+//       // .col-9 {
+//       //   width: 75%;
+//       // }
+//       // .col-10 {
+//       //   width: 83.33%;
+//       // }
+//       // .col-11 {
+//       //   width: 91.66%;
+//       // }
+//       // .col-12 {
+//       //   width: 100%;
+//       // }
+//       @content;
+//     } //992px +
+//   }
+//   @if $breakpoint == big-desktop {
+//     @media only screen and (min-width: 75em) {
+//       /* For large desktop: */
+//       // .col-1 {
+//       //   width: 8.33%;
+//       // }
+//       // .col-2 {
+//       //   width: 16.66%;
+//       // }
+//       // .col-3 {
+//       //   width: 25%;
+//       // }
+//       // .col-4 {
+//       //   width: 33.33%;
+//       // }
+//       // .col-5 {
+//       //   width: 41.66%;
+//       // }
+//       // .col-6 {
+//       //   width: 50%;
+//       // }
+//       // .col-7 {
+//       //   width: 58.33%;
+//       // }
+//       // .col-8 {
+//       //   width: 66.66%;
+//       // }
+//       // .col-9 {
+//       //   width: 75%;
+//       // }
+//       // .col-10 {
+//       //   width: 83.33%;
+//       // }
+//       // .col-11 {
+//       //   width: 91.66%;
+//       // }
+//       // .col-12 {
+//       //   width: 100%;
+//       // }
+//       @content;
+//     } //1200px +
+//   }
+// }

@@ -11,17 +11,22 @@
         <span></span>
       </label>
     </div>
-    <div class="theme">
-      <app-themebtn></app-themebtn>
-    </div>
-    <!-- <div class="hamburger-menu">
-    <input type="checkbox" class="hamburger-menu__checkbox" id="navi-toggle" />
-
+    <app-themebtn></app-themebtn>
+  </div>
+  <div class="hamburger-menu">
+    <input
+      type="checkbox"
+      class="hamburger-menu__checkbox"
+      id="navi-toggle"
+      [(ngModel)]="showHamburgerMenu"
+    />
     <label for="navi-toggle" class="hamburger-menu__button-hamburger">
       <span class="hamburger-menu__icon">&nbsp;</span>
     </label>
-
-    <div class="hamburger-menu__background">&nbsp;</div>
-  </div> -->
+    <div class="hamburger-menu__background"></div>
+    <app-navigation
+      (hideHamburgerMenuEvent)="showHamburgerMenu = $event"
+      class="nav"
+    ></app-navigation>
   </div>
 </header>

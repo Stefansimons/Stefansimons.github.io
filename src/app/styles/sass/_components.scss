@@ -26,6 +26,7 @@ svg {
     height: 30rem;
   }
 }
+
 .btn {
   &,
   &:link,
@@ -59,8 +60,8 @@ svg {
     }
   }
   &-transform {
-    background-color: var(--color-primary-light-1);
-    color: var(--color-primary-dark-2);
+    background-color: var(--color-primary-light-4);
+    color: var(--color-primary-main-1);
     &::after {
       content: "";
       display: inline-block;
@@ -87,7 +88,7 @@ svg {
       }
     }
     &-light {
-      background-color: var(--color-primary-light-4);
+      background-color: var(--color-primary-light-2);
     }
   }
   &-box {
@@ -136,30 +137,37 @@ svg {
   scrollbar-width: none;
 
   .left-sidebar & {
-    height: 26rem;
+    height: 22rem;
   }
   .central-content & {
     height: 110rem;
   }
 }
-.row {
-  display: flex;
-  &:not(:last-of-type) {
-    margin-bottom: 2rem;
-  }
-}
-.col-1-of-3 {
-  flex-basis: 33%;
-  :not(:last-of-type) {
-    margin-right: 0.5rem;
-  }
-}
-.col-1-of-2 {
-  flex-basis: 50%;
-  &:not(:last-of-type) {
-    margin-right: 0.5rem;
-  }
-}
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   &:not(:last-of-type) {
+//     margin-bottom: 2rem;
+//   }
+// }
+// .col-1-of-3 {
+//   flex-basis: 33%;
+//   :not(:last-of-type) {
+//     margin-right: 0.5rem;
+//   }
+//   @include respond(tab-port) {
+//     flex-basis: 100%;
+//     margin-bottom: 1rem;
+//   }
+// }
+// .col-1-of-2 {
+//   &:not(:last-of-type) {
+//     margin-right: 0.5rem;
+//   }
+//   @include respond(tab-port) {
+//     flex-basis: 50%;
+//   }
+// }
 .form__label {
   &::after {
     content: ":";
@@ -183,15 +191,7 @@ input[type="text"]:focus:invalid {
     var(--color-primary-animation-4) 100%
   );
 }
-.theme-btn {
-  border: none;
-  line-height: 0;
-  cursor: pointer;
-  background-color: var(--color-primary-light-1);
-  svg {
-    fill: var(--color-primary-dark-1);
-  }
-}
+
 .dot-menu {
   // width: 100%;
   // max-width: 150px;
@@ -204,7 +204,7 @@ input[type="text"]:focus:invalid {
     display: block;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: beige;
+    background-color: var(--color-primary-light-1);
     border-radius: 2.5rem;
     margin: 0 auto;
     transition: background-color 0.2s linear;
@@ -219,7 +219,7 @@ input[type="text"]:focus:invalid {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background-color: green;
+      background-color: var(--color-primary-main-1);
       transition: 0.4s;
     }
     &::before {
@@ -390,14 +390,10 @@ input[type="text"]:focus:invalid {
 /**********/
 /*******Skils Bar*******/
 .skills {
-  // color: var(--color-primary-light-3);
-  &__label {
-  }
   &__container {
     width: 100%;
     height: 0.75rem;
     background-color: var(--color-primary);
-    // border: 1px solid var(--color-primary-main-1);
     border-radius: 0.5rem;
     padding: 2px;
   }
@@ -437,15 +433,6 @@ input[type="text"]:focus:invalid {
 }
 /***************/
 
-/****** Right sidebar************/
-.right-sidebar {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -459,7 +446,7 @@ input[type="text"]:focus:invalid {
     padding: 5px 0;
     position: absolute;
     top: -30px;
-    z-index: 1;
+    // z-index: 1;
     margin-left: -20px;
     &::after {
       content: "";
@@ -510,18 +497,13 @@ input[type="text"]:focus:invalid {
 
 /******Services figure***********/
 .services {
-  .row {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-  }
   .card {
     perspective: 150rem; //Perspective, on parent block, Very huge value
     -moz-perspective: 150rem;
     height: 30rem;
     width: 100%;
     position: relative;
-
+    color: var(--color-secondary-animation-3);
     &:hover .card__side-front-1,
     &:hover .card__side-front-2 {
       transform: rotateY(180deg);
@@ -537,7 +519,6 @@ input[type="text"]:focus:invalid {
       transform: rotateX(360deg);
     }
     &__side {
-      color: white;
       backface-visibility: hidden;
       transition: all 1s;
       position: absolute;
@@ -561,15 +542,9 @@ input[type="text"]:focus:invalid {
         transform: rotateX(180deg);
       }
     }
-
-    &__body {
-    }
     .picture-box {
-      height: 9rem;
-
+      height: 10rem;
       &-1 {
-        // background-color: var(--color-primary-light-1);
-
         background-image: url(/assets/images/angular.jpg);
         width: 8rem;
       }
@@ -605,6 +580,7 @@ input[type="text"]:focus:invalid {
     }
     &__header {
       background-color: white;
+      width: 100%;
     }
     &__heading-span {
       padding: 1rem 1.5rem;
@@ -659,7 +635,6 @@ input[type="text"]:focus:invalid {
     }
     &__footer {
       background-color: grey;
-      //  border: 1px solid black;
     }
   }
 }
@@ -800,6 +775,7 @@ footer {
     }
   }
 }
+
 /*************Contact *************/
 .contact {
   height: 100%;
@@ -822,6 +798,7 @@ footer {
     &__content {
       width: 50%;
       margin: auto;
+      padding: 1rem 0;
       align-items: center;
     }
     // .row {
@@ -874,20 +851,23 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+/* Navigation*/
 
+/*******************/
 /* Hamburger menu*/
 .hamburger-menu {
   &__checkbox {
     display: none;
   }
+
   &__button-hamburger {
-    background-color: white;
+    background-color: var(--color-primary-light-1);
     width: 3rem;
     height: 3rem;
     position: fixed;
     top: 0.5rem;
     right: 2rem;
-    z-index: 10;
+    z-index: 2000;
     border-radius: 50%;
     text-align: center;
     box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%);
@@ -901,7 +881,7 @@ footer {
     top: 0.5rem;
     right: 2.5rem;
     background-image: radial-gradient(#7ed56f, #28b485);
-    z-index: 5;
+    z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
@@ -912,7 +892,7 @@ footer {
     &::before,
     &::after {
       display: inline-block;
-      background-color: red;
+      background-color: var(--color-primary-main-1);
       width: 2rem;
       height: 1px;
     }
@@ -930,51 +910,7 @@ footer {
       top: 0.5rem;
     }
   }
-  .navigation {
-    &__list {
-      list-style: none;
-    }
-    &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 4rem;
-    }
 
-    .icon-wrapper__link {
-      background-color: var(--color-primary);
-      svg {
-        fill: var(--color-primary-light-3);
-      }
-      &:hover,
-      &.active {
-        background-color: var(--color-primary-main-1);
-      }
-    }
-    @include respond(tab-port) {
-      // & {
-      //   position: fixed;
-      //   top: 0;
-      //   left: 0;
-      //   height: 100vh;
-      //   width: 0;
-      //   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      //   // background-color: red;
-      //   // width: 100%;
-      //   &__list {
-      //     position: absolute;
-      //     top: 50%;
-      //     left: 50%;
-      //     transform: translate(-50%, -50%);
-      //     text-align: center;
-      //     width: 100%;
-      //   }
-      // }
-      // &__background {
-      //   z-index: 0;
-      // }
-    }
-  }
   // Functionality
   &__checkbox:checked + &__button-hamburger &__icon::before {
     top: 0;
@@ -987,7 +923,26 @@ footer {
   &__checkbox:checked + &__button-hamburger &__icon {
     background-color: transparent;
   }
+  &__checkbox:not(:checked) ~ &__background {
+    transform: none;
+  }
   &__checkbox:checked ~ &__background {
     transform: scale(85);
+  }
+
+  &__checkbox:not(:checked) ~ .nav {
+    opacity: 0;
+    width: 0;
+  }
+  &__checkbox:not(:checked) ~ .test {
+    background-color: red;
+    transform: none;
+  }
+  &__checkbox:checked ~ .test {
+    background-color: yellow;
+  }
+  &__checkbox:checked ~ .nav {
+    opacity: 1;
+    width: 100%;
   }
 }
